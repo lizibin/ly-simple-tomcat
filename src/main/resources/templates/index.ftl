@@ -3,7 +3,7 @@
 <head lang="en">
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>自动化运维演示tomcat应用案例</title>
+	<title>把美女带回家应用案例</title>
 	<meta name="description" content="自动化运维演示tomcat应用案例">
 	<meta name="keywords" content="index">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -21,8 +21,8 @@
 <div class="page-container">
             <h1 class="title"></h1>
             <div>
-            	<button class="layui-btn layui-btn-lg layui-btn-primary layui-btn-radius" onclick="adduser()">添加测试用户</button>
-                <button class="layui-btn layui-btn-lg layui-btn-primary layui-btn-radius" onclick="queryuserList()">查询所有用户</button>
+            	<button class="layui-btn layui-btn-lg layui-btn-primary layui-btn-radius" onclick="adduser()">添加美女</button>
+                <button class="layui-btn layui-btn-lg layui-btn-primary layui-btn-radius" onclick="queryuserList()">查询后宫美女</button>
             </div>
             <div style="text-align:center;clear:both" class="date">
 			</div>
@@ -43,7 +43,7 @@
         <script src="../js/index.js"></script>
         <script type="text/javascript">
         	 $('.title').typeIt({
-           	  whatToType: "This is tomcat test wab!!!",
+           	  whatToType: "这里有很多美女，想挑哪个回家都可以，随便挑。",
               typeSpeed: 300,
               lifeLike: true,
               breakLines :true
