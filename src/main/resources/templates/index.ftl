@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>把美女带回家应用案例</title>
-	<meta name="description" content="自动化运维演示tomcat应用案例">
+	<meta name="description" content="把美女带回家应用案例">
 	<meta name="keywords" content="index">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="renderer" content="webkit">
@@ -22,7 +22,7 @@
             <h1 class="title"></h1>
             <div>
             	<button class="layui-btn layui-btn-lg layui-btn-primary layui-btn-radius" onclick="adduser()">添加美女</button>
-                <button class="layui-btn layui-btn-lg layui-btn-primary layui-btn-radius" onclick="queryuserList()">查询后宫美女</button>
+                <button class="layui-btn layui-btn-lg layui-btn-primary layui-btn-radius" onclick="queryuserList()">今晚翻盘哪个</button>
             </div>
             <div style="text-align:center;clear:both" class="date">
 			</div>
