@@ -29,7 +29,7 @@
 			<div class="connect">
                 <p>联系作者:子彬</p>
                 <p>
-                    <a class="qq" href="http://wpa.qq.com/msgrd?Menu=no&Exe=QQ&Uin=125720240"></a>
+                    <a class="qq" target="_blank" href="http://wpa.qq.com/msgrd?Menu=no&Exe=QQ&Uin=125720240"></a>
                    <!--  <a class="twitter" href=""></a> -->
                 </p>
             </div>
