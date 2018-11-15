@@ -17,7 +17,7 @@ function adduser(){
 
 function queryuserList(){
 	layer.open({
-		  title :"查询后宫美女",
+		  title :"今晚翻盘哪个",
 		  type: 2, 
 		  content: 'queryUserListPage', //这里content是一个URL，如果你不想让iframe出现滚动条，你还可以content: ['${contextPath}/s/loadProdListPage', 'no']
 		  area: ['1024px', '650px']

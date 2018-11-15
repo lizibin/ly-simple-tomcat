@@ -4,7 +4,7 @@
 <body>
 	<div style="padding: 10px;">
 		<div class="userTable">
-			  搜索用户：
+			  搜索美女：
 			  <div class="layui-inline">
 			    <input class="layui-input" name="id" id="demoReload" autocomplete="off">
 			  </div>
@@ -20,17 +20,17 @@
       </div>
       <!-- 操作列的标签-->
 <script type="text/html" id="userSexTemple">
- {{#  if(d.sex == 'M'){ }}
+ {{#  if(d.sex === 'M'){ }}
  	男
  {{#  } }}
 
- {{#  if(d.sex == 'F'){ }}
+ {{#  if(d.sex === 'F'){ }}
  	女
  {{#  } }}
 </script>
 <!-- 操作列的标签-->
-<script type="text/html" id="hotsearchBar">
-    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+<script type="text/html" id="userOperBar">
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">打入冷宫</a>
 </script>
       <script src="../js/jquery-1.8.2.min.js"></script>
       <script src="../js/layui/layui.js"></script>
