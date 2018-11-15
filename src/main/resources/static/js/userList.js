@@ -11,14 +11,14 @@ $(function(){
 		    ,cols: [[
 		      {field:'name', width:180,title: '名字'}
 		      ,{field:'age',  title: '年龄',sort: true}
-		      ,{field:'sex', width:80, title: '性别'}
-		    ,{fixed:'right', width:250, align:'center',title: '操作',toolbar: '#hotsearchBar'}
+		      ,{field:'sex', width:80, title: '性别',templet: '#userSexTemple'}
+		    ,{fixed:'right', width:250, align:'center',title: '操作',toolbar: '#userOperBar'}
 		    ]]
 		   
 		  });
 		  
 		//监听操作工具条
-		  table.on('tool(hostsarch-filter)', function(obj){
+		  table.on('tool(user-filter)', function(obj){
 		    var data = obj.data;
 		    if(obj.event === 'online'){
 		      layer.msg('title：'+ data.title + ' 的查看操作');
@@ -66,7 +66,7 @@ $(function(){
 				    }
 				  };
 				  
-				  $('.demoTable .layui-btn').on('click', function(){
+				  $('.userTable .layui-btn').on('click', function(){
 				    var type = $(this).data('type');
 				    active[type] ? active[type].call(this) : '';
 				  });

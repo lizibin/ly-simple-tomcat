@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -44,6 +45,19 @@ public class UserController {
 	@ResponseBody
 	public Object queryUserList(HttpServletRequest request, HttpServletResponse response,Integer page,Integer limit){
 		List<User> userList=userMapper.queryuserList();
-		return new LayerDto<User>(0, "返回成功", 4,userList); 
+		return new LayerDto<User>(0, "返回成功", 10,userList); 
+	}
+	
+	@PostMapping("/addUser")
+	@ResponseBody
+	public String addUser(HttpServletRequest request, HttpServletResponse response,User user){
+		if(null==user){
+			return "fail";
+		}
+		int result=userMapper.insert(user.getName(), user.getAge(), user.getSex());
+		if(result==0){
+			return "fail";
+		}
+		return "ok";
 	}
 }
