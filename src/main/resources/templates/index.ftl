@@ -26,13 +26,13 @@
             </div>
             <div style="text-align:center;clear:both" class="date">
 			</div>
-			<div class="connect">
+			<!-- <div class="connect">
                 <p>联系作者:子彬</p>
                 <p>
                     <a class="qq" target="_blank" href="http://wpa.qq.com/msgrd?Menu=no&Exe=QQ&Uin=125720240"></a>
-                   <!--  <a class="twitter" href=""></a> -->
+                    <a class="twitter" href=""></a>
                 </p>
-            </div>
+            </div> -->
         </div>
         <script src="../js/jquery-1.8.2.min.js"></script>
         <script src="../js/layui/layui.js"></script>
