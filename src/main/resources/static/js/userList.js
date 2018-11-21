@@ -25,12 +25,12 @@ $(function(){
 		    } else if(obj.event === 'offline'){
 		    	layer.msg('title：'+ data.title + ' 的查看操作');
 		    } else if(obj.event === 'del'){
-		    	layer.confirm('您确定要将'+data.name+'打入冷宫吗？不如送子彬',{
+		    	layer.confirm('您确定要将'+data.name+'打入冷宫吗？',{
 		    		icon: 3,
 		    		btn: ['确定','取消'] //按钮
 		    		}, function(){
 		    		  obj.del();
-		    		  layer.msg('赠送给子彬成功。界面删除，数据库没有删除', {icon: 1});
+		    		  layer.msg('打入冷宫成功！！', {icon: 1});
 		    		}, function(index){
 		    			layer.close(index);
 		    		});
