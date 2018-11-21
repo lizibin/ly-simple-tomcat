@@ -43,8 +43,8 @@ public class UserController {
 	
 	@RequestMapping("/queryUserList")
 	@ResponseBody
-	public Object queryUserList(HttpServletRequest request, HttpServletResponse response,Integer page,Integer limit){
-		List<User> userList=userMapper.queryuserList();
+	public Object queryUserList(HttpServletRequest request, HttpServletResponse response,Integer page,Integer limit,String name){
+		List<User> userList=userMapper.queryuserList(name);
 		return new LayerDto<User>(0, "返回成功", 10,userList); 
 	}
 	

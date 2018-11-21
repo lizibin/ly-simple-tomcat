@@ -6,7 +6,7 @@ $(function(){
 		    ,url:'queryUserList'
 		    ,cellMinWidth: 80 
 		    ,page: true
-		    ,id: 'hostsearchReload'
+		    ,id: 'userListReload'
 		    ,height: 500
 		    ,cols: [[
 		      {field:'name', width:180,title: '名字'}
@@ -24,26 +24,16 @@ $(function(){
 		      layer.msg('title：'+ data.title + ' 的查看操作');
 		    } else if(obj.event === 'offline'){
 		    	layer.msg('title：'+ data.title + ' 的查看操作');
-		    	
-		    	
 		    } else if(obj.event === 'del'){
-		    	
-		    	layer.confirm('您确定要删除'+data.title+'吗？',{
+		    	layer.confirm('您确定要将'+data.name+'打入冷宫吗？不如送子彬',{
 		    		icon: 3,
 		    		btn: ['确定','取消'] //按钮
 		    		}, function(){
-		    		  layer.msg('的确很重要', {icon: 1});
+		    		  obj.del();
+		    		  layer.msg('赠送给子彬成功。界面删除，数据库没有删除', {icon: 1});
 		    		}, function(index){
 		    			layer.close(index);
 		    		});
-		    	/* 
-		      layer.confirm('真的删除行么', function(index){
-		    	icon: 3,btn: ['确定','取消'] //按钮
-		      },function (){
-		    	  obj.del();
-			        layer.close(index);
-		    	  
-		      }); */
 		    } else if(obj.event === 'edit'){
 		    	window.location=contextPath+'/admin/hotsearch/load/'+data.id
 		    }
@@ -53,14 +43,13 @@ $(function(){
 		  var $ = layui.$, active = {
 				    reload: function(){
 				      var demoReload = $('#demoReload');
-				      
 				      //执行重载
-				      table.reload('hostsearchReload', {
+				      table.reload('userListReload', {
 				        page: {
 				          curr: 1 //重新从第 1 页开始
 				        }
 				        ,where: {
-				        	 title: demoReload.val()
+				        	 name: demoReload.val()
 				        }
 				      });
 				    }

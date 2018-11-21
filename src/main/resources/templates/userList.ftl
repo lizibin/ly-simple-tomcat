@@ -6,7 +6,7 @@
 		<div class="userTable">
 			  搜索美女：
 			  <div class="layui-inline">
-			    <input class="layui-input" name="id" id="demoReload" autocomplete="off">
+			    <input class="layui-input" name="name" id="demoReload" autocomplete="off">
 			  </div>
 			  <button class="layui-btn " data-type="reload">搜索</button>
 			</div>
@@ -15,7 +15,7 @@
 			 <!-- 底部固定区域 -->
 			 <div class="layui-footer">
 			     &nbsp;&nbsp;&nbsp;-说明：
-			    1、 用户列表查询
+			    1、后宫佳丽很多很多。士为知己者死，女为悦己者容
 	      </div>
       </div>
       <!-- 操作列的标签-->
@@ -26,6 +26,10 @@
 
  {{#  if(d.sex === 'F'){ }}
  	女
+ {{#  } }}
+
+ {{#  if(d.sex === 'Y'){ }}
+ 	妖
  {{#  } }}
 </script>
 <!-- 操作列的标签-->

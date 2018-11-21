@@ -5,14 +5,14 @@ import java.util.List;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.SelectProvider;
 
 import com.ly.model.User;
 
 public interface  UserMapper {
 	
-	
-	@Select("select * from user")
-	List<User> queryuserList();
+	@SelectProvider(type=UserSqlProvider.class,method="selectName")
+	List<User> queryuserList(String name);
 
 	@Select("select * from user where name LIKE CONCAT('%',#{name},'%')")
 	User findByName(@Param("name") String name);
