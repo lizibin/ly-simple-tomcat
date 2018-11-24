@@ -22,7 +22,7 @@ public class IndexController {
 
 	@RequestMapping("/")
 	public String index(HttpServletRequest request, HttpServletResponse response,ModelMap model){
-		log.info(new Date()+"----------------请求访问index页面--------------->");
+		log.info("----------------请求访问index页面--------------->");
 		return "index";
 	}
 }

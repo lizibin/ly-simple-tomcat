@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="../css/date.css">
 </head>
 <body>
+<img alt="容器学院-www.ctnrs.com" src="../images/logo.png">
 <div class="page-container">
             <h1 class="title"></h1>
             <div style="margin-top: 15%;">
@@ -43,7 +44,7 @@
         <script src="../js/index.js"></script>
         <script type="text/javascript">
         	 $('.title').typeIt({
-           	  whatToType: "这里有很多美女，想挑哪个回家都可以，随便挑。",
+           	  whatToType: "这里有很多美女，想挑哪个回家都可以!!!",
               typeSpeed: 300,
               lifeLike: true,
               breakLines :true
