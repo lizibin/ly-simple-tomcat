@@ -20,12 +20,12 @@
 <body>
 <div class="page-container">
             <h1 class="title"></h1>
-            <div>
+            <div style="margin-top: 15%;">
             	<button class="layui-btn layui-btn-lg layui-btn-primary layui-btn-radius" onclick="adduser()">添加美女</button>
                 <button class="layui-btn layui-btn-lg layui-btn-primary layui-btn-radius" onclick="queryuserList()">今晚翻盘哪个</button>
             </div>
-            <div style="text-align:center;clear:both" class="date">
-			</div>
+         <!--    <div style="text-align:center;clear:both" class="date">
+			</div> -->
 			<!-- <div class="connect">
                 <p>联系作者:子彬</p>
                 <p>

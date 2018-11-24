@@ -1,5 +1,6 @@
 package com.ly.controller;
 
+import java.util.Date;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -16,17 +17,17 @@ import com.ly.dto.LayerDto;
 import com.ly.mapper.UserMapper;
 import com.ly.model.User;
 
+import lombok.extern.slf4j.Slf4j;
+
 /**
  * UserController
  * @author lizibin
  *
  */
 @Controller
+@Slf4j
 public class UserController {
 
-/*	@Resource
-    Configuration cfg;*/
-	
 	@Autowired
 	private UserMapper userMapper;
 	
@@ -38,12 +39,14 @@ public class UserController {
 	
 	@RequestMapping("/addUserPage")
 	public String addUserPage(ModelMap model){
+		log.info(new Date()+"----------------请求访问添加美女页面--------------->");
 		return "addUser";
 	}
 	
 	@RequestMapping("/queryUserList")
 	@ResponseBody
 	public Object queryUserList(HttpServletRequest request, HttpServletResponse response,Integer page,Integer limit,String name){
+		log.info(new Date()+"----------------请求查询美女列表集合-----page={},limit={},name={}---------->",page,limit,name);
 		List<User> userList=userMapper.queryuserList(name);
 		return new LayerDto<User>(0, "返回成功", 10,userList); 
 	}
@@ -52,12 +55,16 @@ public class UserController {
 	@ResponseBody
 	public String addUser(HttpServletRequest request, HttpServletResponse response,User user){
 		if(null==user){
+			log.info(new Date()+"添加失败，美女对象为空！！！");
 			return "fail";
 		}
+		log.info(new Date()+"----------------请求添加一个美,名字={},年龄={},性别={}",user.getName(),user.getAge(),user.getSex());
 		int result=userMapper.insert(user.getName(), user.getAge(), user.getSex());
 		if(result==0){
+			log.info(new Date()+"添加失败，数据库插入美女返回空!!!");
 			return "fail";
 		}
+		log.info(new Date()+"添加'{}'美女成功！！",user.getName());
 		return "ok";
 	}
 }

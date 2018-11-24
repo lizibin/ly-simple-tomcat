@@ -8,8 +8,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
+import lombok.extern.slf4j.Slf4j;
+
 @SpringBootApplication
 @MapperScan(basePackages="com.ly.mapper")
+@Slf4j  
 public class AppSimpleTomcat  extends SpringBootServletInitializer {
 	
 	@Override
@@ -19,6 +22,6 @@ public class AppSimpleTomcat  extends SpringBootServletInitializer {
 	
 	public static void main(String[] args) {
 		SpringApplication.run(AppSimpleTomcat.class, args);
-		System.out.println(new Date()+"----------------------把美女带回家案例启动成功-------------------->>>");
+		log.info(new Date()+"----------------------把美女带回家案例启动成功-------------------->>>");
 	}
 }
